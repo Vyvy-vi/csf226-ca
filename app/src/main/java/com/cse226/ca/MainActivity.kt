@@ -16,6 +16,9 @@ import okhttp3.Request
 import java.io.File
 import java.io.FileOutputStream
 
+// https://avatars.githubusercontent.com/u/62864373?v=4
+// https://i.imgur.com/mtbl1cr.jpeg
+
 class MainActivity : AppCompatActivity() {
     lateinit var et: EditText
     lateinit var txt: TextView
@@ -62,9 +65,9 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     val imgBitmap = BitmapFactory.decodeFile(file.absolutePath)
-                    img.setImageBitmap(imgBitmap)
 
                     withContext(Dispatchers.Main) {
+                        img.setImageBitmap(imgBitmap)
                         txt.text = "File Downloaded!"
                     }
                 }
